@@ -51,7 +51,7 @@ if (import.meta.main) {
             body = { message: "No pID provided or password does not exist" };
           }
         } // CP-new-endpoint
-        else if (endpoint[0] === "set" && req.method === "POST") {
+        else if (endpoint[0] === "new" && req.method === "POST") {
           if (
             urlArgs.pID && urlArgs.password &&
             passwords[urlArgs.pID] === undefined
