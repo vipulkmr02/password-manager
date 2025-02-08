@@ -1,9 +1,16 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net src/main.ts --port=6000"
+    "dev": "deno run --allow-read --allow-net --allow-env --allow-sys --watch src/main.ts --port 6000",
+    "debug": "deno run --inspect-brk --allow-read --allow-net --allow-env --allow-sys --watch src/main.ts --port 6000"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
-    "@std/cli": "jsr:@std/cli@^1.0.12"
-  }
+    "@std/cli": "jsr:@std/cli@^1.0.12",
+    "@types/bcrypt": "npm:@types/bcrypt@^5.0.2",
+    "@types/node": "npm:@types/node@^22.13.1",
+    "bcrypt": "npm:bcrypt@^5.1.1",
+    "esbuild": "npm:esbuild@^0.24.2",
+    "mongodb": "npm:mongodb@^6.13.0"
+  },
+  "nodeModulesDir": "auto"
 }
