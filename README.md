@@ -1,4 +1,4 @@
-# 🦖 Deno password manager API
+# 🦕 Deno password manager API
 
 This is a simple password manager using AES-256 encryption created purely using Deno.
 
