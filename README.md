@@ -10,10 +10,16 @@ This is a simple password manager using AES-256 encryption created purely using 
 Gives a random API key.
 
 ### /passwords
-- `GET`: Gets a password, args required: pID
-- `POST`: Saves a new password, args required: pID, password
-- `PUT`: Updates a new password, args required: pID, password
-- `DELETE`: Deletes a password, args required: pID
+- request `GET`: Gets a password, args required: pID
+- request `POST`: Saves a new password, args required: pID, password
+- request `PUT`: Updates a new password, args required: pID, password
+- request `DELETE`: Deletes a password, args required: pID
 
 ## Usage
-- run `deno run dev` to start the the password manager API.
+- run `deno run build` to generate executable.
+
+## CURL requests:
+- for quering: `curl -X GET -H "key: <api-key>" -s localhost:6000/passwords?pID=<passwordIdentifier>`
+- for saving: `curl -X POST -H "key: <api-key>" -s localhost:6000/passwords?pID=<passwordIdentifier>?password=<password>`
+- for updating: `curl -X PUT -H "key: <api-key>" -s localhost:6000/passwords?pID=<passwordIdentifier>?password=<password>`
+- for deleting: `curl -X DELETE -H "key: <api-key>" -s localhost:6000/passwords?pID=<passwordIdentifier>`
