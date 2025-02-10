@@ -7,7 +7,7 @@ This is a simple password manager using AES-256 encryption created purely using 
 - `passwords` (**pID**: Password Identifier, **password**: Password):
 
 ### /newUser
-Gives a random API key.
+Generates an API key.
 
 ### /passwords
 - request `GET`: Gets a password, args required: pID
