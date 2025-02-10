@@ -13,5 +13,13 @@
     "esbuild": "npm:esbuild@^0.24.2",
     "mongodb": "npm:mongodb@^6.13.0"
   },
-  "nodeModulesDir": "auto"
+  "nodeModulesDir": "auto",
+  "deploy": {
+    "project": "15601ff1-2af5-4903-b0b3-c0dfc6d5e40f",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "src/main.ts"
+  }
 }
