@@ -1,7 +1,8 @@
 {
   "tasks": {
     "dev": "deno run --allow-read --allow-net --allow-env --allow-sys --watch src/main.ts --port 6000",
-    "debug": "deno run --inspect-brk --allow-read --allow-net --allow-env --allow-sys --watch src/main.ts --port 6000"
+    "debug": "deno run --inspect-brk --allow-read --allow-net --allow-env --allow-sys --watch src/main.ts --port 6000",
+    "build": "deno compile --output ./dist/imp.pass-server --allow-read --allow-net --allow-env --allow-sys src/main.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",

@@ -5,6 +5,7 @@ import { generateAPIkey, verifyAPIkey } from "./auth.ts";
 // parsing arguments
 const args = parseArgs(Deno.args);
 const PORT = parseInt(args["port"]) || 5000;
+const host= args["host"] || "localhost";
 const jstringify = JSON.stringify;
 
 function getURLArgs(endpoint: string[]) {
@@ -16,7 +17,7 @@ function getURLArgs(endpoint: string[]) {
 
 if (import.meta.main) {
   Deno.serve(
-    { port: PORT, hostname: "localhost" },
+    { port: PORT, hostname: host },
     async (req: Request) => {
       let body: { [x: string]: string } = {};
       let opts: ResponseInit = { status: 200 };

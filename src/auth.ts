@@ -7,6 +7,7 @@ export async function generateAPIkey() {
   const client = new MongoClient("mongodb://localhost");
   let uuid: string = crypto.randomUUID();
   let hash = crypto.createHash(HashAlgo).update(uuid).digest("hex");
+  // loops until unique uuid isn't generated
   while (
     await client.db("imppassdb")
       .collection("keys")
